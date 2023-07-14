@@ -8,14 +8,10 @@
     ></shared-search-box>
   </div>
 
-  <div class="row">
+  <div class="row mt-2">
     <div class="col">
       <!-- Tabla de resultados -->
-      <ul>
-        <li *ngFor="let country of countries">
-          {{country.name.official}} - {{country.capital}}
-        </li>
-      </ul>
+      <countries-table [countries]="countries"></countries-table>
     </div>
 
   </div>
