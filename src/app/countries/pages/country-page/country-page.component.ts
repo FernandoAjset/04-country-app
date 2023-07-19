@@ -10,7 +10,7 @@ import { switchMap } from 'rxjs';
   styleUrls: ['./country-page.component.css']
 })
 export class CountryPageComponent implements OnInit {
-  public country!: Country;
+  public country?: Country;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,8 +27,7 @@ export class CountryPageComponent implements OnInit {
         if (!country) {
           return this.router.navigateByUrl('');
         }
-        console.log(country);
-        return;
+        return this.country = country;
       })
   }
 }
