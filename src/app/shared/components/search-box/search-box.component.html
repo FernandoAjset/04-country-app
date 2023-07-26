@@ -5,4 +5,5 @@ class="form-control"
 [placeholder]="placeholder"
 #txtSearchText
 (keyup.enter)="onChangeValue()"
+(keyup)="onKeyPress(txtSearchText.value)"
 />
