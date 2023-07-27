@@ -9,6 +9,7 @@ import { CountriesService } from '../../services/countries.service';
 })
 export class ByCountryPageComponent implements OnInit {
   public countries: Country[] = [];
+  public initialValue: string = '';
 
   constructor(
     private countriesService: CountriesService
@@ -22,6 +23,8 @@ export class ByCountryPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.countries = this.countriesService.cacheStore.byCountry.countries;
+    this.initialValue = this.countriesService.cacheStore.byCountry.term;
   }
 
 }

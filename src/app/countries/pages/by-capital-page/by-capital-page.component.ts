@@ -10,6 +10,7 @@ import { Country } from '../../interfaces/country.model';
 export class ByCapitalPageComponent implements OnInit {
   public countries: Country[] = [];
   public isLoading: boolean = false;
+  public initialValue: string = '';
   constructor(
     private countriesService: CountriesService
   ) { }
@@ -24,6 +25,8 @@ export class ByCapitalPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.countries = this.countriesService.cacheStore.byCapital.countries;
+    this.initialValue = this.countriesService.cacheStore.byCapital.term;
   }
 
 }
