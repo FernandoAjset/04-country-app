@@ -3,7 +3,7 @@ Este proyecto es una Single Page Application (SPA) desarrollada en Angular que c
 El proyecto es parte de la practica del curso "Angular: De cero a experto - Edición 2023" y se enfoca en cubrir las siguientes características del Framework.
 
 ### Demostración
-https://fernandoajset.github.io/04-country-app/countries/by-capital
+https://fernandoajset.github.io/04-country-app
 
 ### Características Principales
 - Rutas: Navegar entre diferentes vistas y componentes utilizando el enrutador de Angular.
